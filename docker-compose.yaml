@@ -31,6 +31,7 @@ services:
       - KEY_FILE=key.pem
       # OpenAI 地址, 一般不需要修改, 除非你有自己的反向代理
       - API_URL=https://api.openai.com
+      - OPENAI_MODEL=gpt-3.5-turbo-16k-0613
       # 代理设置, 例如 - HTTP_PROXY=http://127.0.0.1:7890, 默认代表不使用代理
       - HTTP_PROXY
       ## 访问控制

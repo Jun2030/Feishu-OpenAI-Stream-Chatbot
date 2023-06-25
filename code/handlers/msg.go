@@ -693,7 +693,7 @@ func sendHelpCard(ctx context.Context,
 	sessionId *string, msgId *string) {
 	newCard, _ := newSendCard(
 		withHeader("🎒需要帮助吗？", larkcard.TemplateBlue),
-		withMainMd("**我是具备打字机效果的聊天机器人！**"),
+		withMainMd("**我是OpenAI助手,基于gpt-3.5-turbo-16k模型！**"),
 		withSplitLine(),
 		withMdAndExtraBtn(
 			"** 🆑 清除话题上下文**\n文本回复 *清除* 或 */clear*",
@@ -703,8 +703,8 @@ func sendHelpCard(ctx context.Context,
 				"chatType":  UserChatType,
 				"sessionId": *sessionId,
 			}, larkcard.MessageCardButtonTypeDanger)),
-		withMainMd("🛖 **内置角色列表** \n"+" 文本回复 *角色列表* 或 */roles*"),
-		withMainMd("🥷 **角色扮演模式**\n文本回复*角色扮演* 或 */system*+空格+角色信息"),
+		withMainMd("⛱️ **内置角色列表** \n"+" 文本回复 *角色列表* 或 */roles*"),
+		withMainMd("📢 **角色扮演模式**\n文本回复*角色扮演* 或 */system*+空格+角色信息"),
 		withSplitLine(),
 		withMainMd("🎒 **需要更多帮助**\n文本回复 *帮助* 或 */help*"),
 	)
